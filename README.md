@@ -1,4 +1,4 @@
-![Texte alternatif](./hotel.jpg)
+
 <img src="./hotel.jpg" alt="Mon Image" width="300">
 
 # 🚀 **Hotel**  
