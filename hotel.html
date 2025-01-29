@@ -4,81 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion de l'Hôtel</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
+    <link rel="stylesheet" href="Hotel.css">
+    <script>
+        function updateRooms() {
+            // Logique pour filtrer les chambres selon l'hôtel sélectionné
         }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: left;
+        function updateRoomTypes() {
+            // Logique pour filtrer les types de chambre
         }
-        th {
-            background-color: #f2f2f2;
+        function updateCollaborators() {
+            // Logique pour afficher les collaborateurs de l'hôtel sélectionné
         }
-    </style>
+    </script>
 </head>
 <body>
-    <h1>Gestion de l'Hôtel</h1>
+    <h1>Réservation d'Hôtel</h1>
     
-    <h2>Hôtels</h2>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Code</th>
-            <th>Ville</th>
-            <th>Adresse</th>
-            <th>Référence</th>
-        </tr>
-        <!-- Ajoutez ici les lignes dynamiquement -->
-    </table>
+    <label for="hotel">Choisissez un hôtel :</label>
+    <select id="hotel" name="hotel" onchange="updateRooms(); updateCollaborators();">
+        <option value="1">Hôtel Paris</option>
+        <option value="2">Hôtel Lyon</option>
+        <option value="3">Hôtel Marseille</option>
+        <option value="3">Hôtel Bordeaux</option>
+        <option value="3">Hôtel Nice</option>
+    </select>
     
-    <h2>Chambres</h2>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Hôtel ID</th>
-            <th>Numéro</th>
-            <th>Type</th>
-            <th>Étage</th>
-        </tr>
-    </table>
+    <h2>Choisissez votre chambre</h2>
+    <label for="room">Numéro de chambre :</label>
+    <select id="room" name="room" onchange="updateRoomTypes();">
+        <option value="101">101</option>
+        <option value="102">102</option>
+        <option value="103">103</option>
+        <option value="104">104</option>
+        <option value="105">105</option>
+        <option value="201">201</option>
+        <option value="202">202</option>
+        <option value="203">203</option>
+        <option value="204">204</option>
+        <option value="205">205</option>
+        <option value="301">301</option>
+        <option value="302">302</option>
+        <option value="303">303</option>
+        <option value="304">304</option>
+        <option value="305">305</option>
+    </select>
     
-    <h2>Types de Chambres</h2>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Label</th>
-            <th>Prix</th>
-            <th>Description</th>
-        </tr>
-    </table>
+    <h2>Choisissez votre type de chambre</h2>
+    <label for="room_type">Type de chambre :</label>
+    <select id="room_type" name="room_type">
+        <option value="Standard">Standard</option>
+        <option value="Deluxe">Deluxe</option>
+        <option value="Suite">Suite</option>
+    </select>
     
-    <h2>Réservations</h2>
+    <h2>Informations de réservation</h2>
+    <form>
+        <label for="lastname">Nom :</label>
+        <input type="text" id="lastname" name="lastname" required>
+        
+        <label for="firstname">Prénom :</label>
+        <input type="text" id="firstname" name="firstname" required>
+        
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">Téléphone :</label>
+        <input type="text" id="phone" name="phone" required>
+        
+        <label for="start_date">Date d'arrivée :</label>
+        <input type="date" id="start_date" name="start_date" required>
+        
+        <label for="end_date">Date de départ :</label>
+        <input type="date" id="end_date" name="end_date" required>
+        
+        <button type="submit">Réserver</button>
+    </form>
+    
+    <h2>Collaborateurs de l'hôtel</h2>
     <table>
         <tr>
             <th>ID</th>
             <th>Nom</th>
             <th>Prénom</th>
-            <th>Chambre ID</th>
-            <th>Email</th>
-            <th>Téléphone</th>
-            <th>Date Début</th>
-            <th>Date Fin</th>
-        </tr>
-    </table>
-    
-    <h2>Collaborateurs</h2>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Nom</th>
-            <th>Prénom</th>
-            <th>Email</th>
-            <th>Téléphone</th>
             <th>Poste</th>
-            <th>Rôle</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Dupont</td>
+            <td>Jean</td>
+            <td>Manager</td>
+            <td>jean.dupont@example.com</td>
         </tr>
     </table>
 </body>
