@@ -3,9 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gestion de l'Hôtel</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
+    <h1>Gestion de l'Hôtel</h1>
     
+    <h2>Hôtels</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Code</th>
+            <th>Ville</th>
+            <th>Adresse</th>
+            <th>Référence</th>
+        </tr>
+        <!-- Ajoutez ici les lignes dynamiquement -->
+    </table>
+    
+    <h2>Chambres</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Hôtel ID</th>
+            <th>Numéro</th>
+            <th>Type</th>
+            <th>Étage</th>
+        </tr>
+    </table>
+    
+    <h2>Types de Chambres</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Label</th>
+            <th>Prix</th>
+            <th>Description</th>
+        </tr>
+    </table>
+    
+    <h2>Réservations</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Chambre ID</th>
+            <th>Email</th>
+            <th>Téléphone</th>
+            <th>Date Début</th>
+            <th>Date Fin</th>
+        </tr>
+    </table>
+    
+    <h2>Collaborateurs</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Email</th>
+            <th>Téléphone</th>
+            <th>Poste</th>
+            <th>Rôle</th>
+        </tr>
+    </table>
 </body>
 </html>
