@@ -1,3 +1,5 @@
+![Texte alternatif](./hotel.jpg)
+
 # 🚀 **Hotel**  
 
 > *"Pourquoi faire simple quand on peut tout casser en beauté ?"* - Moi, probablement.  
