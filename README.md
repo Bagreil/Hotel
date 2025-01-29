@@ -1,17 +1,17 @@
-# 🚀 **Projet Incroyable**  
+# 🚀 **Hotel**  
 
 > *"Pourquoi faire simple quand on peut tout casser en beauté ?"* - Moi, probablement.  
 
 ## 🎯 **C'est quoi ce truc ?**  
 
-Bienvenue dans **Projet Incroyable™**, un projet qui va soit révolutionner le monde, soit faire crasher ton PC. Une chose est sûre : ça va être fun.  
+Bienvenue dans **Mon Hotel™**, un projet qui va soit révolutionner le monde, soit faire crasher ton PC. Une chose est sûre : ça va être fun.  
 
 ## 🛠 **Installation (si t'oses)**  
 
 1. Clone ce bazar :  
    ```bash
-   git clone https://github.com/user/projet-incroyable.git
-   cd projet-incroyable
+   git clone https://github.com/Bagreil/Hotel.git
+   cd Hotel
    ```
 2. Installe les dépendances magiques :  
    ```bash
@@ -19,7 +19,7 @@ Bienvenue dans **Projet Incroyable™**, un projet qui va soit révolutionner le
    ```
 3. Croise les doigts et lance :  
    ```bash
-   npm start  # ou python app.py, qui sait ?
+   node api.js
    ```
 
 ## 🤔 **Comment ça marche ?**  
