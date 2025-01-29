@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-    <img src="./hotel.jpg" alt="Mon Image" width="300">
-=======
-
 <img src="./hotel.jpg" alt="Mon Image" width="300">
->>>>>>> 49952b28bad7a763868174545b9ad530c07ee97a
 
 # 🚀 **Hotel**  
 
