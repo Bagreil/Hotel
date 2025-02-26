@@ -6,70 +6,31 @@
     <title>Gestion de l'Hôtel</title>
     <link rel="stylesheet" href="Hotel.css">
     <script>
-        function updateRooms() {
-            // Logique pour filtrer les chambres selon l'hôtel sélectionné
-        }
-        function updateRoomTypes() {
-            // Logique pour filtrer les types de chambre
-        }
-        function updateCollaborators() {
-            // Logique pour afficher les collaborateurs de l'hôtel sélectionné
+        function searchAvailability() {
+            window.location.href = 'search_results.html?hotel=' + document.getElementById('hotel').value +
+                '&start_date=' + document.getElementById('start_date').value +
+                '&end_date=' + document.getElementById('end_date').value;
         }
     </script>
 </head>
 <body>
-    <h1>Réservation d'Hôtel</h1>
+    <header>
+        <h1>Réservation d'Hôtel</h1>
+    </header>
     
-    <label for="hotel">Choisissez un hôtel :</label>
-    <select id="hotel" name="hotel" onchange="updateRooms(); updateCollaborators();">
-        <option value="1">Hôtel Paris</option>
-        <option value="2">Hôtel Lyon</option>
-        <option value="3">Hôtel Marseille</option>
-        <option value="3">Hôtel Bordeaux</option>
-        <option value="3">Hôtel Nice</option>
-    </select>
+    <div class="hero">
+        <p>Bienvenue dans notre service de réservation d'hôtels</p>
+    </div>
     
-    <h2>Choisissez votre chambre</h2>
-    <label for="room">Numéro de chambre :</label>
-    <select id="room" name="room" onchange="updateRoomTypes();">
-        <option value="101">101</option>
-        <option value="102">102</option>
-        <option value="103">103</option>
-        <option value="104">104</option>
-        <option value="105">105</option>
-        <option value="201">201</option>
-        <option value="202">202</option>
-        <option value="203">203</option>
-        <option value="204">204</option>
-        <option value="205">205</option>
-        <option value="301">301</option>
-        <option value="302">302</option>
-        <option value="303">303</option>
-        <option value="304">304</option>
-        <option value="305">305</option>
-    </select>
-    
-    <h2>Choisissez votre type de chambre</h2>
-    <label for="room_type">Type de chambre :</label>
-    <select id="room_type" name="room_type">
-        <option value="Standard">Standard</option>
-        <option value="Deluxe">Deluxe</option>
-        <option value="Suite">Suite</option>
-    </select>
-    
-    <h2>Informations de réservation</h2>
-    <form>
-        <label for="lastname">Nom :</label>
-        <input type="text" id="lastname" name="lastname" required>
-        
-        <label for="firstname">Prénom :</label>
-        <input type="text" id="firstname" name="firstname" required>
-        
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="phone">Téléphone :</label>
-        <input type="text" id="phone" name="phone" required>
+    <div class="search-box">
+        <label for="hotel">Choisissez un hôtel :</label>
+        <select id="hotel" name="hotel">
+            <option value="1">Hôtel Paris</option>
+            <option value="2">Hôtel Lyon</option>
+            <option value="3">Hôtel Marseille</option>
+            <option value="4">Hôtel Bordeaux</option>
+            <option value="5">Hôtel Nice</option>
+        </select>
         
         <label for="start_date">Date d'arrivée :</label>
         <input type="date" id="start_date" name="start_date" required>
@@ -77,25 +38,13 @@
         <label for="end_date">Date de départ :</label>
         <input type="date" id="end_date" name="end_date" required>
         
-        <button type="submit">Réserver</button>
-    </form>
+        <button onclick="searchAvailability()">Rechercher</button>
+    </div>
     
-    <h2>Collaborateurs de l'hôtel</h2>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Nom</th>
-            <th>Prénom</th>
-            <th>Poste</th>
-            <th>Email</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Dupont</td>
-            <td>Jean</td>
-            <td>Manager</td>
-            <td>jean.dupont@example.com</td>
-        </tr>
-    </table>
+
+    
+    <footer>
+        <p>&copy; 2025 Gestion de l'Hôtel - Tous droits réservés</p>
+    </footer>
 </body>
 </html>
