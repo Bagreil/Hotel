@@ -1,12 +1,12 @@
-import hotelModel from "../models/hotel.model.js";
+import roomsModel from "../models/rooms.model.js";
 
-const hotelController = {
+const roomsController = {
     getAll: async (req, res) => {
         try {
-            const results = await hotelModel.all();
+            const results = await roomsModel.all();
     
             res.json({
-                hotels: results,
+                rooms: results,
                 total: results.length
             })
         } catch (error) {
@@ -17,10 +17,10 @@ const hotelController = {
     },
     getOne: async (req, res) => {
         try {
-            const results = await hotelModel.one(req.params.id);
+            const results = await roomsModel.one(req.params.id);
     
             res.json({
-                hotels: results
+                rooms: results
             })
         } catch (error) {
             console.error(error);
@@ -30,10 +30,10 @@ const hotelController = {
     },
     create: async (req, res) => {
         try {
-            const results = await hotelModel.create(req.body);
+            const results = await roomsModel.create(req.body);
     
             res.json({
-                hotels: results
+                rooms: results
             })
         } catch (error) {
             console.error(error);
@@ -43,10 +43,10 @@ const hotelController = {
     },
     update: async (req, res) => {
         try {
-            const results = await hotelModel.update(req.params.id, req.body);
+            const results = await roomsModel.update(req.params.id, req.body);
     
             res.json({
-                hotels: results
+                rooms: results
             })
         } catch (error) {
             console.error(error);
@@ -56,10 +56,10 @@ const hotelController = {
     },
     delete: async (req, res) => {
         try {
-            const results = await hotelModel.delete(req.params.id);
+            const results = await roomsModel.delete(req.params.id);
     
             res.json({
-                hotels: results
+                rooms: results
             })
         } catch (error) {
             console.error(error);
@@ -69,4 +69,4 @@ const hotelController = {
     }
 };
 
-export default hotelController;
+export default roomsController;

@@ -1,69 +1,28 @@
 import express from 'express'
-import mysql from 'mysql2/promise'
-const connection = await mysql.createConnection({
-    host: '127.0.0.1',
-    database: 'hotel',
-    user: 'root',
-    password: 'rout'
-});
+import hotelRouter from './router/hotel.js';
+import roomsRouter from './router/rooms.js';
+import bookingRouter from './router/booking.js';
+import collaboratorsRouter from './router/collaborators.js';
+import optionsBookingRouter from './router/optionsBooking.js';
+import roomOptionsRouter from './router/roomOptions.js';
+import roomTypesRouter from './router/roomTypes.js';
 
 const app = express()
+
+// Config to get data from the http request
 app.use(express.json());
 
-app.get('/', function (req, res) {
-  res.json('Hello World')
+const port = 3000
+
+// Routes
+app.use(hotelRouter);
+app.use(roomsRouter);
+app.use(bookingRouter);
+app.use(collaboratorsRouter);
+app.use(optionsBookingRouter);
+app.use(roomOptionsRouter);
+app.use(roomTypesRouter);
+
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
 })
-
-app.get('/hotel', async function (req, res) {
-    const [results, fields] = await connection.query('SELECT * FROM hotels')
-    res.json(results)
-})
-
-app.get('/hotel/:id', async function (req, res) {
-    const [results, fields] = await connection.query('SELECT * FROM hotels WHERE id = ?', [req.params.id])
-    res.json(results)
-})
-
-app.post('/hotel', async function (req, res) {
-    try {
-        const [results, fields] = await connection.query(
-            'INSERT INTO hotels (code, city, address, reference) VALUES (?, ?, ?, ?)',
-            [req.code, req.city, req.address, req.reference]
-        );
-        res.json({
-            hotels: results})
-    } catch (error) {
-        console.error(error)
-        res.status(500).json({ error: 'An error occurred' })
-    }
-    });
-
-app.put('/hotel/:id', async function (req, res) {
-    try {
-        const [results, fields] = await connection.query(
-            'UPDATE hotels SET code = ?, city = ?, address = ?, reference = ? WHERE id = ?',
-            [req.code, req.city, req.address, req.reference, req.params.id]
-        );
-        res.json({
-            hotels: results})
-    } catch (error) {
-        console.error(error)
-        res.status(500).json({ error: 'An error occurred' })
-    }
-    });
-
-app.delete('/hotel/:id', async function (req, res) {
-    try {
-        const [results, fields] = await connection.query(
-            'DELETE FROM hotels WHERE id = ?', [req.params.id]
-        );
-        res.json({
-            hotels: results})
-    } catch (error) {
-        console.error(error)
-        res.status(500).json({ error: 'An error occurred' })
-    }
-    });
-
-
-app.listen(3000)
