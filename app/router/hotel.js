@@ -1,5 +1,5 @@
 import { Router } from "express";
-import hotelController from "./hotel.controller.js";
+import hotelController from "../../hotel.controller.js";
 
 const hotelRouter = new Router();
 
