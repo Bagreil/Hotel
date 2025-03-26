@@ -1,7 +1,4 @@
 <a href="https://www.youtube.com/watch?v=cIwRQwAS_YY"><img src="./hotel.jpg" alt="Mon Image" width="300">
-<img src="./qr.png">
-Scan moi !
-
 
 # 🚀 **Hotel**  
 
